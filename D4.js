@@ -28,6 +28,7 @@ console.log(crazySum(2, 4));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const crazyDiff = (l1) => {
+  let diff;
   if (l1 <= 19) {
     diff = Math.abs(l1 - 19);
   } else {
@@ -85,18 +86,17 @@ console.log(reverseString("EPICODE"));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let upperFirst = (stringa) => {
-  arrayStringa = stringa.split(" ");
 
-  for (let x = 0; x < arrayStringa.lenght; x++) {
-    arrayLettere = arrayStringa[x].split("");
-    arrayLettere[0].toUpperCase();
-    arrayLettere.join("");
+const newStringa = (stringa) => {
+  let fraseArr = stringa.split(" ");
+
+  for (let x = 0; x < fraseArr.length; x++) {
+    fraseArr[x] = fraseArr[x][0].toUpperCase() + fraseArr[x].slice(1);
   }
-  arrayStringa.join("");
-  return arrayStringa;
+  return fraseArr.join(" ");
 };
-console.log(upperFirst("ciao sono gabriel"));
+console.log(newStringa("ciao mondo mondo mondo mondo mondo"));
+
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
